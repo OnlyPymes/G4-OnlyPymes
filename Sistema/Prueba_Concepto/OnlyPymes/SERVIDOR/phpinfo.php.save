@@ -1,0 +1,10 @@
+  $host ="mysqltrans.face.ubiobio.cl";
+  $hostname="mysql.face.ubiobio.cl";
+	$username="G4ingsoftware";
+	$password="G4ingsoftware20$21";
+  $dbname="G4ingsoftware_bd";
+
+  $conn = mysqli_connect($hostname,$username, $password,$dbname);
+
+
+  echo("xd");<?php phpinfo();
