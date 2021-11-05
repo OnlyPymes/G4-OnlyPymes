@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 // require_once '../vendor/autoload.php';
 // require_once '../googleAuth/config.php';
 // $client = new Google_Client();
@@ -23,12 +23,12 @@
 //
 //
 //  }
-//
-//
 
 
 
- ?>
+
+
+ ?> -->
 
 
 <html lang="es">
@@ -49,17 +49,17 @@
 
 
 
-          <!-- <?php
+           <?php
 
           // echo "  <a href='".$client->createAuthUrl()."'>Google Login</a>"?>
-          //
-          // <br>
-          // <?php
+
+           <br>
+          <?php
           // echo 'Bienvenido '.$name .' a Only Pymes<br>';
           // echo $email ;
 
 
-           ?> -->
+           ?>
 
 
 
@@ -68,7 +68,13 @@
           <input class="usser" type="password" name="pass1" value="" placeholder="Contraseña">
           <input class="usser" type="password" name="pass2" value="" placeholder="Contraseña">
           <imput class="buttom" type="submit"  name ="registrar" value= "Registrarse"/>
+
+
+
           <!-- <button name="registrar">Registrar</button> -->
+
+
+          
           <input class="usser" type="submit" name="registrar" >
 
           <p><a href="#">¿Olvidaste tu contraseña?</a></p>

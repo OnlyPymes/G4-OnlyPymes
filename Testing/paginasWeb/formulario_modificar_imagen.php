@@ -1,9 +1,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Formulario Modificar Imagenes</title>
+    <link rel="stylesheet" href="../estilos/formulario_img.css">
+    <link  rel="icon"   href="../icon/Only.png"/>
   </head>
   <body >
+    <a href="../index.php"><img class="icon" src="../icon/Only.png" width="95" height="auto"></a>
     <?php
     include("../BaseDatos/conexion_mysql.php");
 
@@ -19,6 +22,7 @@
 
 
      ?>
+  <div class="tabla">
     <center>
         <form method="post" enctype="multipart/form-data" action="../BaseDatos/modificar_imagen.php?id=<?php echo $row['IMG_ID']  ?>">
           <input type="text" required name="nombre" placeholder="Nombre.... "value="<?php echo $row['IMG_NOMBRE'] ?>"><br><br>
@@ -29,9 +33,10 @@
 
 
          <br><br>
-         <a href="mostrar_imagenes.php">Mostrar</a>
+         <a href="mostrar_imagenes.php" class="Boton">Mostrar</a>
 
     </center>
+  </div>
 
   </body>
 </html>
