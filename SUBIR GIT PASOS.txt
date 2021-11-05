@@ -1,2 +1,5 @@
 cd "al proyecto"
 git status
+git add . 
+git commit -m "xyz"
+git push origin master
