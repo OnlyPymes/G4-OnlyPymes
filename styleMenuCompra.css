@@ -17,8 +17,9 @@ img {
   align-self: center;
 }
 .login-shop{
-  list-style-type: none;
   color:white;
+  list-style-type: none;
+  
 }
 .ls_link:link, ls_link:visited, ls_link:active{
   text-decoration: none;
