@@ -6,21 +6,17 @@ $contrase=$_POST["pass"];
 $correo=$_POST["email"];
 $tlf=$_POST["numero"];
 $selec=$_POST["seleccionar"];
+$valid=1;
 
-echo ($ruut);
-echo($nombre);
-echo($contrase);
-echo($correo);
-echo($tlf);
-echo($selec);
-
-
-
-//$insertar="INSERT INTO pyme VALUES ('$nombre', '$contrase', '$correo','$tlf','$selec','0')";
+$insertar="INSERT INTO pyme(id_pyme,nombre_pyme,contrasena,email,telefono_pyme,id_ciudad,id_validacion) VALUES ('$ruut','$nombre', '$contrase', '$correo','$tlf','$selec','$valid')";
 //$query = mysqli_query($con,$insertar);
-//if($query)
-//{
-  //  echo 'Registrado correctamente';
-//}
+$variable= $con->query($insertar);
+if($variable == true)
+{
+ echo 'Registrado correctamente';
+}
+else{
+    echo 'nope';
+}
 
 ?>

@@ -1,3 +1,8 @@
+<?php
+Include('conexion.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -62,22 +67,31 @@
         <div class="input-contenedor">
           <label>Seleccione su ciudad</label>
           <select class="custom-select" id="seleccionar" name="seleccionar">
-            <option selected>Despliegue el menú</option>
-            <option value="1">Santiago</option>
+            <option value="0">Despliegue el menú</option>
+           <!-- <option value="1">Santiago</option>
             <option value="2">Valparaíso</option>
             <option value="3">Concepción</option>
-            <option value="1">La serena</option>
-            <option value="2">Antofagasta</option>
-            <option value="3">Iquique</option>
-            <option value="1">Rancagua</option>
-            <option value="2">Temuco</option>
-            <option value="3">Talca</option>
-            <option value="1">Arica</option>
-            <option value="2">Puerto Montt</option>
-            <option value="3">Chillán</option>
-            <option value="1">Calama</option>
-            <option value="2">Quillota</option>
-            <option value="3">Osorno</option>
+            <option value="4">La serena</option>
+            <option value="5">Antofagasta</option>
+            <option value="6">Iquique</option>
+            <option value="7">Rancagua</option>
+            <option value="8">Temuco</option>
+            <option value="9">Talca</option>
+            <option value="10">Arica</option>
+            <option value="11">Puerto Montt</option>
+            <option value="12">Chillán</option>
+            <option value="13">Calama</option>
+            <option value="14">Quillota</option>
+            <option value="15">Osorno</option>-->
+            <?php
+            $query= $con ->query ("SELECT nombre_ciudad, id_ciudad FROM Ciudad");
+            while($columna = mysqli_fetch_array($query))
+            {
+              $nombre = $columna['nombre_ciudad'];
+              $id=$columna['id_ciudad'];
+              echo "<option value='$id'>$nombre</option>";
+            }
+            ?>
           </select>
         </div>
 
