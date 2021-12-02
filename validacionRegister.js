@@ -10,12 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var usuario= document.getElementById("nombrepyme").value;
     if(usuario.length == 0 )
     {
-      Swal.fire({
-        title: 'Error en usuario',
-        text: 'no se ha ingresado un usuario para registrar',
-        icon: 'error',
-        confirmButtonText: 'Cool'
-      })
+      alert("el no se ha ingresado el nombre de usuario")
+      
       return false;
     }
     var pass=document.getElementById("pwd").value;
