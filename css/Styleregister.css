@@ -1,0 +1,21 @@
+.form-container{
+    width: 25%;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    text-align: -webkit-center;
+    margin-left:35%;
+    margin-top:1%;
+    border-radius:40px;
+}
+.label-container{
+    text-align: center;
+    width:100%;
+}
+.logo1{
+    width:70%;
+}
+.form-label{
+    color:white;
+}
+.input-contenedor{
+    width:60%;
+}
