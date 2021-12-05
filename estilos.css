@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+.btn {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.green {
+    background-color: #199319;
+}
+
+.red {
+    background-color: red;
+}
+
+table,
+th {
+    border-style: solid;
+    border-width: 1;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+#titulo {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
+#texto-pymes {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
+select {
+  max-width: 450px;
+  width: 100%;
+  text-align-last: center;
+  height: 30px;
+  border-radius: 3px;
+}
+
+body {
+  background: #fff;
+}
+
+.wrapper {
+  max-width: 450px;
+  width: 100%;
+  margin: 100px auto 0;
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px;
+}
