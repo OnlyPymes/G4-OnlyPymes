@@ -28,35 +28,35 @@ Include('conexion.php');
       <div class="mb-3 mt-3">
         <label for="usr" class="form-label">Rut:</label>
         <div class="input-contenedor">
-          <input name="rut" type="text" class="form-control" id="usuario" placeholder="Ingrese el rut de su pyme">
+          <input required name="rut" type="text" class="form-control" id="usuario" placeholder="Ingrese el rut de su pyme">
         </div>
 
       </div>
       <div class="mb-3 mt-3">
         <label for="usr" class="form-label">Nombre de la Pyme:</label>
         <div class="input-contenedor">
-          <input name="nombre" type="text" class="form-control" id="nombrepyme" placeholder="Ingrese el nombre de su pyme">
+          <input required name="nombre" type="text" class="form-control" id="nombrepyme" placeholder="Ingrese el nombre de su pyme">
         </div>
 
       </div>
       <div class="mb-3">
         <label for="pwd" class="form-label">Password:</label>
         <div class="input-contenedor">
-          <input name="pass" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+          <input required name="pass" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
         </div>
 
       </div>
       <div class="mb-3 mt-3">
         <label for="email" class="form-label">Email:</label>
         <div class="input-contenedor">
-          <input name="email" type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          <input  required name="email" type="email" class="form-control" id="email" placeholder="Enter email" name="email">
         </div>
 
       </div>
       <div class="mb-3 mt-3">
         <label for="usr" class="form-label">Ingrese su numero telefónico:</label>
         <div class="input-contenedor">
-          <input name="numero" type="text" class="form-control" id="numerotelefono" placeholder="Ingrese su número telefónico">
+          <input required name="numero" type="text" class="form-control" id="numerotelefono" placeholder="Ingrese su número telefónico">
         </div>
 
       </div>
