@@ -42,9 +42,6 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
                         if ($pyme['validacion'] == "1")
                         echo
                         "<a href=desactivar_pyme.php?id=" . $pyme['id'] . " class='btn red'>Deshabilitada</a>";
-                        else
-                        echo
-                        "<a href=activar_pyme.php?id=" . $pyme['id'] . " class='btn green'>Activa</a>";
                         ?>
                 </tr>
                 <?php
