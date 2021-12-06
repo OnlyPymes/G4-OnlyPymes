@@ -43,8 +43,6 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
                         echo
                         "<a href=desactivar_pyme.php?id=" . $pyme['id'] . " class='btn red'>Deshabilitada</a>";
                         else
-                        echo
-                        "<a hreft=activar_pyme.php?id=" . $pyme['id'] . " class='btn green'>Habilitada</a>";
                         ?>
                 </tr>
                 <?php
