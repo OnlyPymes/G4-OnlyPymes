@@ -18,22 +18,22 @@ include('conexion.php');
 </head>
 
 <body class="body-style">
-    <form action="/action_page.php" class="formulario">
+    <form action="Sesion.php" class="formulario" method="POST">
         <header>
             <img src="./Imagenes/WhatsApp Image 2021-12-22 at 18.53.34.jpeg" class="logo-container">
         </header>
         <label class="titulo">Inicie sesión como Pyme</label>
         <div class="mb-3 mt-3">
-            <label for="email" class="form-label">Rut:</label>
-            <input type="email" class="form-control" id="email" placeholder="11111111-1" name="email">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="Email" placeholder="OnlyPymes@gmail.com" name="email">
         </div>
         
         <div class="mb-3">
-            <label for="pwd" class="form-label">Contraseña:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Ingrese Contraseña" name="pswd">
+            <label for="pswd" class="form-label">Contraseña:</label>
+            <input type="pswd" class="form-control" id="pswd" placeholder="Ingrese Contraseña" name="pswd">
         </div>
 
-        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        <button id="btn" name="btn" type="submit" class="btn btn-primary">Iniciar Sesión</button>
         <br>
         <a class="cuenta" href="register.php">No tengo cuenta de Pyme</a>
     </form>
