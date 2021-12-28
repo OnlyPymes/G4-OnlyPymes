@@ -3,31 +3,47 @@
 function mostrarValores(){
     let formulario=document.forms['formulario'];
     let rut = formulario['rut'].value;
-    
+    var bandera=true;
     if(!VerificaRut(rut)){
         
         alert("Error, se ha ingresado mal el rut");
         //buscar diseños de alerta para js
+        bandera=false;
     }
     let nombrepy= formulario['npyme'].value;
    
     if(nombrepy.length===0 || nombrepy.length>40)
     {
         alert("El tamaño del nombre debe ser mayor a 0 y menor a 40 caracteres");
+        bandera=false;
     }
-    let pass=formulario['pwd'].vañue
+    let pass=formulario['pwd'].value
     if(pass.length===0 || pass.length>40)
     {
         alert("El tamaño de la contraseña debe ser mayor a 0 y menor a 40 caracteres");
+        bandera=false;
     }
     if(!(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(formulario['email'].value)))
     {
         alert("El correo ingresado es incorrecto");
+        bandera=false;
     }
     if(!(/^(\+?56)?(\s?)(0?9)(\s?)[9876543]\d{7}$/.test(formulario['numerotelefono'].value)))
     {
-        alert("El numero ingresado no es valido")
+        alert("El numero ingresado no es valido");
+        bandera=false;
     }
+    
+    if(formulario['seleccionar'].value ==='0')
+    {
+        alert('No puede seleccionar el valor inicial')
+        bandera=false;   
+    }
+    if(!bandera){
+        return false;
+    }
+    formulario.submit();
+    return true;
   }
 
 
