@@ -1,6 +1,6 @@
 <?php
-$con = mysqli_connect("localhost", "raygh", "4172", "pymes");
-$sql = "SELECT * FROM `tiendas`";
+$con = mysqli_connect("localhost", "raygh", "4172", "pymes_test");
+$sql = "SELECT * FROM `pym`";
 $Sql_query = mysqli_query($con, $sql);
 $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
 ?>
@@ -25,6 +25,7 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
   <link rel="manifest" href="assets/img/favicons/manifest.json">
   <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
   <meta name="theme-color" content="#ffffff">
+  
 
 
   <!-- ===============================================-->
@@ -120,7 +121,7 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
                             
                             <td>
                                 <?php
-                                if ($pyme['validacion'] == "1")
+                                if ($pyme['estado'] == "0")
                                 echo
                                 "<a href=desactivar_pyme.php?id=" . $pyme['id'] . " class='btn red'>Deshabilitada</a>";
                                 else
