@@ -44,13 +44,10 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
     <section class="py-11 bg-light-gradient border-bottom">
       
       <div class="bg-holder overlay overlay-light"
-        style="background-image:url(../assets/img/gallery/banner-fondo2.png);background-size:cover;">
+        style="background-image:url(../assets/img/gallery/admin_panel.png);background-size:cover;">
       </div>  
-      <div class="container"><a class="navbar-brand d-inline-flex" href="index.html"><img class="d-inline-block"
-            src="../assets/img/gallery/logo.png" alt="logo" /><span
-            class="text-negrita-titulos fs-0 fw-bold ms-2"><h4><strong>OnlyPymes</h4></strong></span></a>
-    </div>
 
+    </section>
 	<div class="container">
     <div id="buscador"></div>
 		<div id="tabla"></div>

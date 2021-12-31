@@ -29,7 +29,7 @@
 
 <div class="row" >
 	<div class="col-sm-12 bg-holder">
-	<h2>Herramientas administrador - PYMES</h2>
+	<h2>Panel de control - PYMES</h2>
 		<table class="table table-hoaux table-condensed table-bordered oauxlay oauxlay-light"
         style="background-color:white">
 		<caption>
