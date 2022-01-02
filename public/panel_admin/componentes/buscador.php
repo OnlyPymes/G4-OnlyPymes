@@ -13,12 +13,12 @@
 	<div class="col-sm-4">
 		<label>Buscador</label>
 		<select id="buscadorvivo" class="form-control input-sm">
-			<option value="0">Seleciona uno</option>
+			<option value="0">Selecciona pyme</option>
 			<?php
 				while($aux=mysqli_fetch_row($result)): 
 			 ?>
 				<option value="<?php echo $aux[0] ?>">
-					<?php echo $aux[1]." ".$aux[2] ?>
+					<?php echo $aux[1] ?>
 				</option>
 
 			<?php endwhile; ?>

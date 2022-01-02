@@ -14,7 +14,7 @@ function agregardatos(nombre,representante,rubro){
 			if(r==1){
 				$('#tabla').load('componentes/tabla.php');
 				 $('#buscador').load('componentes/buscador.php');
-				alertify.success("agregado con exito");
+				alertify.success("Agregado con exito");
 			}else{
 				alertify.error("Fallo el servidor");
 			}
@@ -54,7 +54,7 @@ function actualizaDatos(){
 			
 			if(r==1){
 				$('#tabla').load('componentes/tabla.php');
-				alertify.success("Actualizado con exito");
+				alertify.success("Actualizado con éxito");
 			}else{
 				alertify.error("Fallo el servidor");
 			}
@@ -80,7 +80,7 @@ function eliminarDatos(id){
 			success:function(r){
 				if(r==1){
 					$('#tabla').load('componentes/tabla.php');
-					alertify.success("Eliminado con exito!");
+					alertify.success("Eliminado con éxito!");
 				}else{
 					alertify.error("Fallo el servidor");
 				}

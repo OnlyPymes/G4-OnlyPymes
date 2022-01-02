@@ -24,7 +24,7 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
   <link rel="manifest" href="../assets/img/favicons/manifest.json">
   <meta name="msapplication-TileImage" content="../assets/img/favicons/mstile-150x150.png">
   <meta name="theme-color" content="#ffffff">
-  <link href="../assets/css/theme.css" rel="stylesheet" />
+  <link href="../assets/css/temas.css" rel="stylesheet" />
 
 	<link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
@@ -44,7 +44,7 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
     <section class="py-11 bg-light-gradient border-bottom">
       
       <div class="bg-holder overlay overlay-light"
-        style="background-image:url(../assets/img/gallery/admin_panel.png);background-size:cover;">
+        style="background-image:url(../assets/img/galeria/admin_panel.png);background-size:cover;">
       </div>  
 
     </section>
