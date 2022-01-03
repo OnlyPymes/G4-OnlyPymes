@@ -40,8 +40,8 @@
 		</caption>
 			<tr>
 				<td>Nombre</td>
-				<td>Representante</td>
-				<td>Rubro</td>
+				<td>Email</td>
+				<td>Telefono</td>
 				<td>Estado</td>
 				<td>Editar</td>
 				<td>Eliminar</td>
@@ -52,14 +52,14 @@
 				if(isset($_SESSION['consulta'])){
 					if($_SESSION['consulta'] > 0){
 						$idp=$_SESSION['consulta'];
-						$sql="SELECT id,nombre,representante,rubro,estado
+						$sql="SELECT id,nombre_pyme,email,telefono_pyme,estado
 						from pym where id='$idp'";
 					}else{
-						$sql="SELECT id,nombre,representante,rubro,estado
+						$sql="SELECT id,nombre_pyme,email,telefono_pyme,estado
 						from pym";
 					}
 				}else{
-					$sql="SELECT id,nombre,representante,rubro,estado
+					$sql="SELECT id,nombre_pyme,email,telefono_pyme,estado
 						from pym";
 				}
 

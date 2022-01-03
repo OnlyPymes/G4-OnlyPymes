@@ -65,11 +65,11 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
       </div>
       <div class="modal-body">
         	<label>Nombre</label>
-        	<input type="text" name="" id="nombre" class="form-control input-sm">
-        	<label>Representante</label>
-        	<input type="text" name="" id="representante" class="form-control input-sm">
-        	<label>Rubro</label>
-        	<input type="text" name="" id="rubro" class="form-control input-sm">
+        	<input type="text" name="" id="nombre_pyme" class="form-control input-sm">
+        	<label>Email</label>
+        	<input type="text" name="" id="email" class="form-control input-sm">
+        	<label>Telefono</label>
+        	<input type="text" name="" id="telefono_pyme" class="form-control input-sm">
           
       </div>
       <div class="modal-footer">
@@ -95,10 +95,10 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
       		<input type="text" hidden="" id="idpyme" name="">
         	<label>Nombre</label>
         	<input type="text" name="" id="nombreu" class="form-control input-sm">
-        	<label>Representante</label>
-        	<input type="text" name="" id="representanteu" class="form-control input-sm">
-        	<label>Rubro</label>
-        	<input type="text" name="" id="rubrou" class="form-control input-sm">
+        	<label>Email</label>
+        	<input type="text" name="" id="emailu" class="form-control input-sm">
+        	<label>Telefono</label>
+        	<input type="text" name="" id="telefonou" class="form-control input-sm">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" id="actualizadatos" data-dismiss="modal">Actualizar</button>
@@ -130,10 +130,10 @@ $all_pymes = mysqli_fetch_all($Sql_query, MYSQLI_ASSOC);
 <script type="text/javascript">
     $(document).ready(function(){
         $('#guardarnuevo').click(function(){
-          nombre=$('#nombre').val();
-          representante=$('#representante').val();
-          rubro=$('#rubro').val();
-            agregardatos(nombre,representante,rubro);
+          nombre_pyme=$('#nombre_pyme').val();
+          email=$('#email').val();
+          telefono_pyme=$('#telefono_pyme').val();
+            agregardatos(nombre_pyme,email,telefono_pyme);
         });
 
 

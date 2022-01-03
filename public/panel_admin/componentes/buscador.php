@@ -2,7 +2,7 @@
 	require_once "../php/conexion.php";
 	$conexion=conexion();
 
-	$sql="SELECT id,nombre,representante,rubro,estado 
+	$sql="SELECT id,nombre_pyme,email,telefono_pyme,estado
 	from pym";
 				$result=mysqli_query($conexion,$sql);
 

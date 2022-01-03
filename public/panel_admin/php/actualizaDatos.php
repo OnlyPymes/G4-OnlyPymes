@@ -2,11 +2,11 @@
 	require_once "conexion.php";
 	$conexion=conexion();
 	$id=$_POST['id'];
-	$n=$_POST['nombre'];
-	$r=$_POST['representante'];
-	$ru=$_POST['rubro'];
+	$n=$_POST['nombre_pyme'];
+	$r=$_POST['email'];
+	$ru=$_POST['telefono_pyme'];
 
-	$sql="UPDATE pym set nombre='$n',representante='$r',rubro='$ru' where id='$id'";
+	$sql="UPDATE pym set nombre_pyme='$n',email='$r',telefono_pyme='$ru' where id='$id'";
 	echo $result=mysqli_query($conexion,$sql);
 
  ?>

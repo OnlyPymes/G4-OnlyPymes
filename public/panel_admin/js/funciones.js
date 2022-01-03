@@ -1,10 +1,10 @@
 
 
-function agregardatos(nombre,representante,rubro){
+function agregardatos(nombre_pyme,email,telefono_pyme){
 
-	cadena="nombre=" + nombre + 
-			"&representante=" + representante +
-			"&rubro=" + rubro;
+	cadena="nombre_pyme=" + nombre_pyme + 
+			"&email=" + email +
+			"&telefono_pyme=" + telefono_pyme;
 
 	$.ajax({
 		type:"POST",
@@ -29,22 +29,22 @@ function agregaform(datos){
 
 	$('#idpyme').val(d[0]);
 	$('#nombreu').val(d[1]);
-	$('#representanteu').val(d[2]);
-	$('#rubrou').val(d[3]);	
+	$('#emailu').val(d[2]);
+	$('#telefonou').val(d[3]);	
 }
 
 function actualizaDatos(){
 
 
 	id=$('#idpyme').val();
-	nombre=$('#nombreu').val();
-	representante=$('#representanteu').val();
-	rubro=$('#rubrou').val();
+	nombre_pyme=$('#nombreu').val();
+	email=$('#emailu').val();
+	telefono_pyme=$('#telefonou').val();
 
 	cadena= "id=" + id +
-			"&nombre=" + nombre + 
-			"&representante=" + representante +
-			"&rubro=" + rubro;
+			"&nombre_pyme=" + nombre_pyme + 
+			"&email=" + email +
+			"&telefono_pyme=" + telefono_pyme;
 
 	$.ajax({
 		type:"POST",
