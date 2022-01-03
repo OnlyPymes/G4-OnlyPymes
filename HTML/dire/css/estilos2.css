@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-register{
+    margin: 0;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+}
+
+.titulo{
+    margin-top: 0;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.label,.input{
+    display: block;
+}
+
+.label{
+    width: 30%;
+}
+
+.input{
+    width: 70%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.file{
+    font-size: 1em;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.envio{
+    width: 100%;
+    background: green;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    margin-top:10px;
+    cursor: pointer;
+}

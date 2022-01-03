@@ -1,0 +1,44 @@
+.body{
+    width: 100%;
+}
+.formulario{
+    text-align: -webkit-center;
+    width: 25%;
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 35%;
+    background-color:#7A7A7A;
+    border-radius:10px;
+}
+.botoniniciar{
+    width: 20%;
+    height: 20%;
+    margin-top:10px;
+    background-color: #d7dfd7;
+    border-radius:10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.inputs{
+    width:60%;
+    margin-top: 10px;
+    margin-right: 5px;
+    appearance: none;
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+.logo-container{
+    width: 30%;
+    border-radius:10px;
+}
+.etiqueta{
+    margin-top: 20px;
+}
+.e2 {
+    margin-top: 20px;
+}
+.boton{
+    margin-top: 20px;
+}

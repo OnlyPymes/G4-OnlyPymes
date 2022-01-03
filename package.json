@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "toastr": "^2.1.4",
-    "validar-rut": "^3.0.0"
-  }
-}

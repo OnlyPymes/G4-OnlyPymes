@@ -1,0 +1,25 @@
+.body-style{
+    background-color:#f5f5f5;
+}
+.logo-container
+{
+    width:30%;
+}
+.formulario{
+    width:25%;
+    margin-left:40%;
+    margin-top:12%;
+    border-radius:30px;
+    background-color:#7A7A7A;
+    text-align: -webkit-center;
+}
+.formulario .titulo{
+    font-size: 20px;
+}
+.formulario .cuenta{
+    font-size:15px;
+    color:#000000;
+}
+.mb-3 .form-control {
+    width:80%;
+}

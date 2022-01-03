@@ -1,0 +1,74 @@
+body{
+background-color: #729d6c;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+
+
+.container{
+  width: 100%;
+  text-align: center;
+}
+
+#textarea{
+  position: relative;
+  top: 10px;
+  min-width: 700px;
+  max-width: 700px;
+  min-height: 10%;
+  max-height: 50%;
+}
+
+
+.formulario{
+  width: 800px;
+  background-color: #07c7e4;
+}
+
+ul{
+  background-color: #07c7e4;
+}
+
+.com{
+  width: 800px;
+}
+
+hr{
+  width: 700px;
+}
+
+#avatar{
+float: left;
+width:25%;
+height: 8%;
+margin-right: 10px;
+border-radius: 20px;
+}
+
+
+.texto-comentario{
+  vertical-align: top;
+  align :left;
+  /* border:1px solid black; */
+  width: 700px;
+}
+
+.us_fe_co{
+  text-align: left;
+
+}
+
+.texto-comentario-respuesta{
+  vertical-align: top;
+  align :rigth;
+  /* border:1px solid black; */
+  width: 700px;
+  float: right;
+}
+
+
+.fecha{
+  color: #a4a4a4;
+}
