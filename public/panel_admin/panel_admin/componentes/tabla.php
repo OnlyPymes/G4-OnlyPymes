@@ -32,12 +32,6 @@
 	<h2>Panel de control - PYMES</h2>
 		<table class="table table-hoaux table-condensed table-bordered oauxlay oauxlay-light"
         style="background-color:white">
-		<caption>
-			<button class="btn btn-primary" data-toggle="modal" data-target="#modalNuevo">
-				Agregar nueva pyme
-				<span class="glyphicon glyphicon-plus"></span>
-			</button>
-		</caption>
 			<tr>
 				<td>Nombre</td>
 				<td>Email</td>
