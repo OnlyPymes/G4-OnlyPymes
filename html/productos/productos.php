@@ -43,48 +43,85 @@ date_default_timezone_set("America/Santiago");
 
            <?php
 
+            
+
+                if(isset($_POST['comentar']) ){
 
 
-              if(isset($_POST['comentar']) ){
+                  $text = $_POST['comentario'];
 
-                $text = $_POST['comentario'];
-                if(!empty($text)){
+                 
 
-                  $user = '1';
-                  $date = date('Y-d-m h:i:s', time());
-                  $id_pr = $_GET['id_pr'];;
-                  $sql = "INSERT INTO comentarios(producto_id,comentario,usuario,reply,fecha) VALUES (?,?,?,?,?)";
-                  $stmt= $conn->prepare($sql);
-                  if($stmt->execute([$id_pr,$text,$user,0,$date])){
-
+                  if(palabras($text)){
+                    if(!empty($text)){
+  
+                      $user = '2';
+                      $date = date('Y-d-m h:i:s', time());
+                      $id_pr = $_GET['id_pr'];;
+                      $sql = "INSERT INTO comentarios(producto_id,comentario,usuario,reply,fecha) VALUES (?,?,?,?,?)";
+                      $stmt= $conn->prepare($sql);
+                      if($stmt->execute([$id_pr,$text,$user,0,$date])){
+    
+                      }else{
+                        print_r($stmt->errorInfo());
+                      }
+                    }
                   }else{
-                    print_r($stmt->errorInfo());
+                    echo '<script language="javascript">alert("Palabra no aceptada en comentarios");</script>';
                   }
+                  
+  
+                }
+  
+                if(isset($_POST['reply'])){
+                  $text = "@".$_GET['user']." ".$_POST['comentario'];
+
+
+                  if(palabras($text)){
+                    if(!empty($text)){
+  
+                      $user = '1';
+                      $id_pr=$_GET['id_pr'];
+                      $date = date('Y-d-m h:i:s', time());
+                      $reply = $_GET['id'];
+                      $sql = "INSERT INTO comentarios(producto_id,comentario,usuario,reply,fecha) VALUES (?,?,?,?,?)";
+                      $stmt= $conn->prepare($sql);
+                      $foto =$_GET['foto'];
+                      if($stmt->execute([$id_pr,$text,$user,$reply,$date])){
+                        header("Location: productos.php?id_pr=$id_pr&foto=$foto");
+                      }else{
+                        print_r($stmt->errorInfo());
+                      }
+                    }
+                  }else{
+                    echo '<script language="javascript">alert("Palabra no aceptada en comentarios");</script>';
+                  }
+                  
+  
+  
                 }
 
-              }
 
-              if(isset($_POST['reply'])){
-                $text = "@".$_GET['user']." ".$_POST['comentario'];
-                if(!empty($text)){
 
-                  $user = '1';
-                  $id_pr=$_GET['id_pr'];
-                  $date = date('Y-d-m h:i:s', time());
-                  $reply = $_GET['id'];
-                  $sql = "INSERT INTO comentarios(producto_id,comentario,usuario,reply,fecha) VALUES (?,?,?,?,?)";
-                  $stmt= $conn->prepare($sql);
-                  $foto =$_GET['foto'];
-                  if($stmt->execute([$id_pr,$text,$user,$reply,$date])){
-                    header("Location: productos.php?id_pr=$id_pr&foto=$foto");
-                  }else{
-                    print_r($stmt->errorInfo());
+
+
+              
+             
+              function palabras($texto){
+                
+                $palabras_malas=array('tonto', '1', '!','IDIOTA',"'","''");
+                
+                //Recorremos la cadena para censurar las palabras prohibidas
+                for ($i=0; $i < count($palabras_malas); $i++) { 
+                  if( (strpos(strtoupper($texto),$palabras_malas[$i]) !== false) || strpos(strtolower($texto),$palabras_malas[$i]) !== false ){
+                      $aux = false;
+                      
+                      break;
+                      return false;
                   }
                 }
-
-
+                
               }
-
 
 
             ?>
@@ -121,17 +158,6 @@ date_default_timezone_set("America/Santiago");
 
 
                         </p>
-
-
-
-
-
-
-
-
-
-
-
 
 
                   <a class="responder" href="productos.php?user=<?php echo $userRes['usuario'] ?>&id=<?php echo $row['id'] ?>&id_pr=<?php echo $row['producto_id'] ?>&foto=<?php echo $_GET['foto'] ?>">Responder</a>
