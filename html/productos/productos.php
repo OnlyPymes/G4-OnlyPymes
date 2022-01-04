@@ -52,7 +52,7 @@ date_default_timezone_set("America/Santiago");
 
                  
 
-                  if(palabras($text)){
+                  if(palabras($text)==true){
                     if(!empty($text)){
   
                       $user = '2';
@@ -77,7 +77,7 @@ date_default_timezone_set("America/Santiago");
                   $text = "@".$_GET['user']." ".$_POST['comentario'];
 
 
-                  if(palabras($text)){
+                  if(palabras($text)==true){
                     if(!empty($text)){
   
                       $user = '1';
@@ -108,8 +108,8 @@ date_default_timezone_set("America/Santiago");
               
              
               function palabras($texto){
-                
-                $palabras_malas=array('tonto', '1', '!','IDIOTA',"'","''");
+                $aux = true;
+                $palabras_malas=array('tonto', '1', '!','IDIOTA',"'","''","tonta");
                 
                 //Recorremos la cadena para censurar las palabras prohibidas
                 for ($i=0; $i < count($palabras_malas); $i++) { 
@@ -117,10 +117,10 @@ date_default_timezone_set("America/Santiago");
                       $aux = false;
                       
                       break;
-                      return false;
+                      return $aux;
                   }
                 }
-                
+                return $aux;
               }
 
 
