@@ -102,7 +102,7 @@ if ($error) {
 
                 <td>
                
-                  <a onclick="return confirm('¿Esta seguro que desea eliminar?');" href="<?= 'borrar.php?id_producto=' . escapar($fila["id_producto"]) ?>">🗑️Borrar</a>
+                  <a  href="<?= 'borrar.php?id_producto=' . escapar($fila["id_producto"]) ?>">🗑️Borrar</a>
                   <a href="<?= 'editar.php?id_producto=' . escapar($fila["id_producto"]) ?>">✏️Editar</a>
                 </td>
               </tr>

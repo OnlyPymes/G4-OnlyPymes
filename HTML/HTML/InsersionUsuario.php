@@ -9,7 +9,7 @@ $passhash=password_hash($pass,PASSWORD_DEFAULT);
 
 $insertar="INSERT INTO usuarios(usuario,contrasena,Email,Telefono) VALUES ('$usuario','$passhash', '$correo', '$tlf')";
 //$query = mysqli_query($con,$insertar);
-$variable= $con->query($insertar);
+
 if($con->query($insertar)){
     header("Location: LogIn.php");  //acepta el registro
     //ver como modificar la ruta de index

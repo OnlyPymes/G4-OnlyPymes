@@ -6,7 +6,8 @@ if(isset($_SESSION['nombre_usuario']))
       header("Location: RegistradoIndex.php");
 }
 if(isset($_POST['btn']))
-{
+{	
+    	
     if(!isset($_SESSION['nombre_usuario']))
     {
         $mail=$_POST['email'];
@@ -42,9 +43,12 @@ if(isset($_POST['btn']))
                     header("Location: iniciarsesion.php");
                 }
         
-        } 
+        }else{
+		header("Location: iniciarsesion.php");
+	} 
     }else{
         session_destroy();
+	header("Location: iniciarsesion.php");
     }
    
 }

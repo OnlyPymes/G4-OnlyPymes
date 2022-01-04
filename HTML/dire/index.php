@@ -25,11 +25,11 @@
 	<center>
 		<h3>Direcciones ingresadas:</h3>
 		<table class="form-register">
-			<tr>
-				<td>ID Direccion</td>
-				<td>Direccion</td>
-				<td>ID Ciudad</td>
-				<td>ID Usuario</td>
+			<tr class= "tabla">
+				<td class="dato_tabla">ID Direccion</td>
+				<td class="dato_tabla">Direccion</td>
+				<td class="dato_tabla">ID Ciudad</td>
+				<td class="dato_tabla">ID Usuario</td>
 			</tr>
 
 			<?php 
@@ -41,7 +41,7 @@
 				        <td><?php echo $dato->id_ciudad; ?></td>
 				        <td><?php echo $dato->id_usuario; ?></td>
 				        <td><a href="editar.php?id=<?php echo $dato->Id_Direccion; ?>">Editar</a></td>
-				        <td><a href="eliminar.php?id=<?php echo $dato->Id_Direccion; ?>">Eliminar</a></td>
+				        <td><a class="eliminar" href="eliminar.php?id=<?php echo $dato->Id_Direccion; ?>">Eliminar</a></td>
 			    	</tr>
 			    	<?php
 			    }
@@ -51,20 +51,20 @@
 		<form method="POST" class="form-register" action= "insertar.php">
 			<table>
 				<tr>
-					<td>Direccion: </td>
+					<td><p>Direccion:</p></td>
 					<td><input type="text" name="txtDire" required=""></td>
 				</tr>
 				<tr>
-					<td>Id Ciudad: </td>
-					<td><input type="text" name="txtIdCity" required=""></td>
+					<td><p>ID Ciudad:</p></td>
+					<td><input type="number" name="txtIdCity" required=""></td>
 				</tr>
 				<tr>
-					<td>Id Usuario: </td>
-					<td><input type="text" name="txtIdUser" required=""></td>
+					<td><p>ID Usuario:</p></td>
+					<td><input type="number" name="txtIdUser" required=""></td>
 				</tr>
 				<tr>
-					<td><input type="reset" name=""> </td>
-					<td><input type="submit" name="submit "value="Ingresar Direccion"></td>
+					<td><input class="submit" type="reset" name=""> </td>
+					<td><input class="submit" type="submit" name="submit "value="Ingresar Direccion"></td>
 				</tr>
 				<?php 
 				include("validacion.php");

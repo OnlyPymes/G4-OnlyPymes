@@ -25,12 +25,12 @@ include('conexion.php');
         <label class="titulo">Inicie sesión como Pyme</label>
         <div class="mb-3 mt-3">
             <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="OnlyPymes@gmail.com" name="email">
+            <input required type="email" class="form-control" id="Email" placeholder="OnlyPymes@gmail.com" name="email">
         </div>
         
         <div class="mb-3">
             <label for="pswd" class="form-label">Contraseña:</label>
-            <input type="password" class="form-control" id="pswd" placeholder="Ingrese Contraseña" name="pswd">
+            <input required type="password" class="form-control" id="pswd" placeholder="Ingrese Contraseña" name="pswd">
         </div>
 
         <button id="btn" name="btn" type="submit" class="btn btn-primary">Iniciar Sesión</button>

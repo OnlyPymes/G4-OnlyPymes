@@ -277,8 +277,7 @@ if(isset($_SESSION['usuario'])){
           </div>
 
           <!-- BOTON VER PRODUCTOS -->
-          <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">Ver
-              productos</a></div>
+          <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="./crud_productos/index.php">Gestionar Producto</a></div>
         </div>
       </div>
 
