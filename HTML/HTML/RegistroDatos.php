@@ -9,10 +9,17 @@ $selec=$_POST["seleccionar"];
 $valid=1;
 $passhash=password_hash($contrase,PASSWORD_DEFAULT);
 $insertar="INSERT INTO pyme(id_pyme,nombre_pyme,contrasena,email,telefono_pyme,id_ciudad,id_validacion) VALUES ('$ruut','$nombre', '$passhash', '$correo','$tlf','$selec','$valid')";
+
 //$query = mysqli_query($con,$insertar);
 $variable= $con->query($insertar);
+
 if($variable == 1){
-    header("Location: ../index.php?error=creado&contenido=Registro con éxito");  //acepta el registro
+    //creo un script de js, se utiliza echo para usar scripts
+    //windows es el header, pero de js
+    echo '<script language="javascript">alert("se ha registrado correctamente");
+    window.location.href = "../index.php?error=creado&contenido=Registro con éxito";</script>';
+    
+    //header("Location: ../index.php?error=creado&contenido=Registro con éxito");  //acepta el registro
     //ver como modificar la ruta de index
 }
 else{

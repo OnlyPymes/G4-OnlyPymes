@@ -44,14 +44,15 @@ function mostrarValores(){
         bandera=false;  
         return bandera; 
     }
-    if(!bandera){
-        return false;
-    }
-    formulario.submit();
-    return true;
+
+        formulario.submit();
+        return true;
+    
+      
+    
   }
 
-
+  
   
   function VerificaRut(rut) {
     if (rut.toString().trim() != '' && rut.toString().indexOf('-') > 0) {

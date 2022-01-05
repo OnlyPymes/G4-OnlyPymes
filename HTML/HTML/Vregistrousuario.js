@@ -2,6 +2,7 @@ function valreg(){
     let registro = document.forms['registro'];
     let usuario = registro['Usuario'].value;
     var aux = true;
+    alert("hola");
     if(usuario.length===0 || usuario.length>40)
     {
         alert("El nombre de usuario debe contener entre 0 y 40 caracteres");
